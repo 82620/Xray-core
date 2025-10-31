@@ -184,6 +184,9 @@ jobs:
       - name: Get project dependencies
         run: go mod download
 
+      - name: Apply patch
+        run: git apply xray.patch
+
       - name: Build Xray
         run: |
           mkdir -p build_assets
